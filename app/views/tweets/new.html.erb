@@ -1,0 +1,18 @@
+<div>
+  <h2>新規投稿ページです。
+  </h2>
+  <%= form_with model: @tweet, local: true do |f| %>
+    <div class="">
+      <div class="">
+        出品画像
+        <span class="">任意</span>
+      </div>
+      <div class="">
+        <%= f.text_area :title, id:"" %>
+        <p><%= f.text_area :text, id:"" %></p>
+        <p><%= f.collection_select(:genre_id, Genre.all, :id, :name, {})%></p>
+        <p><%= f.submit '投稿する' %>
+      </div>
+    </div>
+  <% end %>
+</div>

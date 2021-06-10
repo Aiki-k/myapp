@@ -1,0 +1,4 @@
+<%= @tweet.title %>
+<p><%= @tweet.text %></p>
+<p><%= @tweet.genre.name %></p>
+<p><%= link_to "編集ページへ", edit_tweet_path(@tweet), method: :get, class: "" %></p>
