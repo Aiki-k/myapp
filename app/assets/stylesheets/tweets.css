@@ -101,15 +101,15 @@
   box-shadow: 0 0 10px rgb(41 41 41 / 20%);
   margin: 50px;
   color: black;
-  background-color: wheat;
+  background-color: white;
 }
 
 .tweet-title{
-  /* width: auto; */
+  width: auto;
 }
 
 .tweet-show{
-  /* width: auto; */
+  width: auto;
   /* text-align: right; */
 }
 
