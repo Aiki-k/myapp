@@ -1,0 +1,112 @@
+header{
+  height: 100%;
+  background-color: white;
+  font-family: 'arial black';
+  text-decoration: none;
+}
+
+.header-main{
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'arial black';
+  
+}
+
+.header-title{
+  color: darkorange;
+  text-decoration: none;
+  font-size: 50px;
+  margin: 20px 100px 0;
+}
+
+/* ----------------------------- */
+
+.header-sub{
+  height: 40%;
+  background-color: white;
+}
+
+.header-ul1{
+  font-size: 30px;
+  text-align: right;
+}
+
+.header-li{
+  display: inline;
+  margin-right: 30px;
+}
+
+.user-nickname {
+  text-decoration: none;
+  /* display: inline; */
+  color:black;
+  font-weight: bold;
+}
+
+.logout {
+  text-decoration: none;
+  /* display: inline; */
+  color: black;
+}
+
+.login {
+  text-decoration: none;
+  /* display: inline; */
+  line-height: 32px;
+  color:black;
+}
+
+.sign-up {
+  text-decoration: none;
+  /* display: inline; */
+  color:black;
+}
+
+/* =================================== */
+/* 下部ボタン */
+
+.header-menu{
+  height: 60px;
+  width: auto;
+  text-align: center;
+  background-color: #0077dd;
+  /* border: 1px solid black; */
+}
+
+.header-ul2{
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: left;
+  margin: auto 0 auto;
+  
+}
+
+.header-btn{
+  font-size: 25px;
+  justify-content: space-between;
+  padding: 10px 30px;
+  font-family: "游ゴシック", "YuGothic";
+}
+
+.text1{
+  color: white;
+  text-decoration: none;
+  text-shadow: black;
+}
+
+.text2{
+  color: white;
+  text-decoration: none;
+}
+
+.text3{
+  color: white;
+  text-decoration: none;
+}
+
+.text4{
+  color: white;
+  text-decoration: none;
+}

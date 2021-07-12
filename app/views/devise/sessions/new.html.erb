@@ -1,0 +1,28 @@
+<div class="center-user">
+ログイン画面
+  <div class="fields">
+
+  <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :ユーザー名 %><br />
+      <%= f.text_field :username, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :パスワード %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "登録", class: "submit-btn" %>
+    </div>
+  <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>

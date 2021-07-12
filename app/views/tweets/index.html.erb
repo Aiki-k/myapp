@@ -1,30 +1,60 @@
-<%= render "shared/header"%>
+<%= render "shared/header" %>
+<div class="main">
+  <div class="wrapper">
+  </div>
 
-<h1>社内Trello</h1>
+  <div class="center">
+    <div class="title">
+      今日のできごと
+      <%= link_to new_tweet_path, class: "post-link" do %>
+        <%# <%= image_tag "post_tegami_toukan" %> 
+      <% end %>
+    </div>
+    
+    <div class="tweet-contents">
 
-  <div class="main">
-    <div class="main2">
-      <h2>
-        社内情報の共有サイトです。
-      </h2>
+      <div class="top-title">
+        ✨最新投稿✨
+      </div>
+      <div class="new-info" >
+        <% @tweet2.each do |t| %>
+            <%= link_to tweet_path(t.id), class: "link" do %> 
+              <ul class="new-tweet" >
+                <li class="t-title" >
+                  <%= t.title %>
+                </li>
+                <div class="t-updated_at" >
+                  <%= t.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                </div>
+              </ul>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+      
+    <div class="tweet-top" >
+      みんなの投稿
+    </div>
+    <div class="tweet-block">
+      <% @tweet.each do |tweet| %>
+        <%= link_to  tweet_path(tweet.id), class: "show-btn" do %>
+          <div class="new-link">
+            <div class="tweet-title" >
+              <%= "○Title"%><br><%= tweet.title %>
+            </div>
+            <div class="tweet-genre">
+              <p><%= "○Genre"%><br><%= tweet.genre.name %></p>
+            </div>
+            <%# <div class="tweet-show" >
+            </div> %>
+          </div>
+        <% end %>
+      <% end %>
     </div>
   </div>
 
-<%= link_to '投稿ページへ', new_tweet_path, class: "" %>
-
-  <div　class="tweet-contents">
-    <h2>
-    ここに新着(更新)順で表示されます
-    </h2>
-
-    <% @tweet.each do |tweet| %>
-      <div class="new-link">
-        <%= tweet.title %>
-        <p><%= tweet.text %></p>
-        <p><%= tweet.genre.name %></p>
-      </div>
-      <p><%= link_to '詳細ページへ', tweet_path(tweet.id), class: "" %></p>
-    <% end %> 
+  <div class="container">
   </div>
+</div>
 
-<p>フッター</p>
+<%= render "shared/footer"%>

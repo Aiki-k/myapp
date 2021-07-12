@@ -2,13 +2,131 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/ */
 
-h1{
+.main{
+  height: auto;
+  width: auto;
+  display: flex;
+  font-size: 30px;
+  background-color: white;
+  /* background: linear-gradient(#F2B9A1, #EA6264); */
+  border: 2px solid gray;
+}
+
+.wrapper{
+  height: auto;
+  width: 15vw;
+  /* background-color: lightblue; */
+}
+
+.center{
+  height: auto;
+  width: 70%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.title{
+  margin:10px auto;
+  display: flex;
+  text-justify: auto;
+}
+
+.post-link{
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  margin: auto 0 auto auto;
+  /* background-image: url(https://4.bp.blogspot.com/-hPK4oKj2_og/VbnRqx2KenI/AAAAAAAAwOw/d0js0DZO5GU/s800/post_tegami_toukan.png);
+  background-size: 30px 30px; */
+}
+
+/* ==================================== */
+
+.new-info{
+  height: 250px;
+  width: 900px;
+  margin: 0 50px 0;
+  padding: 20px 0 0 20px;
+  background-image: url(https://frame-illust.com/fi/wp-content/uploads/2015/01/59b8a166b7ddd8082f3a8faa5793b86e.png);
+  /* box-shadow: 0 0 10px rgb(41 41 41 / 20%); */
+  background-repeat: no-repeat;
+  background-size: 910px 260px;
+
+}
+
+.top-title{
+  font-size: 50px;
   text-align: center;
 }
 
-.new-link{
-  font-size: 30px;
-  width: 300px;
-  
+.new-tweet{
+  font-size: 20px;
   display: flex;
+  list-style-type: disc;
+}
+
+.t-title{
+  margin: 10px 0 0 50px;
+  ;
+}
+
+.t-updated_at{
+  margin: 10px 60px 0 auto;
+}
+
+.link{
+  color: black;
+  text-decoration: none;
+}
+
+/* --------------------------------------- */
+
+.tweet-top{
+  border-bottom: 4px solid greenyellow;
+}
+
+.tweet-block{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.new-link{
+  height: 200px;
+  width: 200px;
+  padding: 20px 0 0 20px;
+  display: flex;
+  font-size: 15px;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgb(41 41 41 / 20%);
+  margin: 50px;
+  color: black;
+  background-color: wheat;
+}
+
+.tweet-title{
+  /* width: auto; */
+}
+
+.tweet-show{
+  /* width: auto; */
+  /* text-align: right; */
+}
+
+.tweet-btn{
+  text-decoration: none;
+}
+
+.tweet-genre{
+  width: auto;
+}
+
+.show-btn{
+  text-decoration: none;
+}
+
+.container{
+  height: auto;
+  width: 15vw;
+  right: 20%;
 }

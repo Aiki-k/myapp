@@ -4,6 +4,7 @@ class TweetsController < ApplicationController
 
   def index
     @tweet = Tweet.order("created_at DESC")
+    @tweet2 = Tweet.order(updated_at: :desc).limit(5)
   end
 
   def new
@@ -30,6 +31,11 @@ class TweetsController < ApplicationController
   end
 
   def show
+  end
+
+  def search
+    #Viewのformで取得したパラメータをモデルに渡す
+    @posts = Tweet.search(params[:search])
   end
 
   private
