@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100%;
   display: flex;
-  background: linear-gradient(#F2B9A1, #EA6264);
+  /* background: linear-gradient(#F2B9A1, #EA6264); */
 }
 
 .fields{
@@ -12,7 +12,7 @@
   font-size: 25px;
   margin: auto;
   border: 2px solid #dddd;
-  box-shadow: 0 0 10px rgb(41 41 41);
+  /* box-shadow: 0 0 10px rgb(41 41 41); */
 }
 
 .field{
