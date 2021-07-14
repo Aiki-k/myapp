@@ -11,7 +11,6 @@
   width: 70%;
   left: 0;
   right: 0;
-  /* margin: auto; */
   background-color: honeydew;
 }
 
@@ -22,7 +21,6 @@
   display: flex;
   font-size: 15px;
   flex-direction: column;
-  /* justify-content: space-around; */
   margin: 50px;
   background-color: white;
   border: 1px solid white

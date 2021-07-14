@@ -6,8 +6,7 @@
   <div class="center">
     <div class="title">
       今日のできごと
-      <%= link_to new_tweet_path, class: "post-link" do %>
-        <%# <%= image_tag "post_tegami_toukan" %> 
+      <%= link_to new_tweet_path, class: "post-link" do %>  
       <% end %>
     </div>
     
@@ -45,8 +44,7 @@
             <div class="tweet-genre">
               <p><%= "○Genre"%><br><%= tweet.genre.name %></p>
             </div>
-            <%# <div class="tweet-show" >
-            </div> %>
+
           </div>
         <% end %>
       <% end %>

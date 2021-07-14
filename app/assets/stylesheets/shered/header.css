@@ -39,27 +39,23 @@ header{
 
 .user-nickname {
   text-decoration: none;
-  /* display: inline; */
   color:black;
   font-weight: bold;
 }
 
 .logout {
   text-decoration: none;
-  /* display: inline; */
   color: black;
 }
 
 .login {
   text-decoration: none;
-  /* display: inline; */
   line-height: 32px;
   color:black;
 }
 
 .sign-up {
   text-decoration: none;
-  /* display: inline; */
   color:black;
 }
 
@@ -71,7 +67,6 @@ header{
   width: auto;
   text-align: center;
   background-color: #0077dd;
-  /* border: 1px solid black; */
 }
 
 .header-ul2{

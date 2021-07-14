@@ -8,14 +8,12 @@
   display: flex;
   font-size: 30px;
   background-color: white;
-  /* background: linear-gradient(#F2B9A1, #EA6264); */
   border: 2px solid gray;
 }
 
 .wrapper{
   height: auto;
   width: 15vw;
-  /* background-color: lightblue; */
 }
 
 .center{
@@ -37,8 +35,6 @@
   font-size: 30px;
   text-decoration: none;
   margin: auto 0 auto auto;
-  /* background-image: url(https://4.bp.blogspot.com/-hPK4oKj2_og/VbnRqx2KenI/AAAAAAAAwOw/d0js0DZO5GU/s800/post_tegami_toukan.png);
-  background-size: 30px 30px; */
 }
 
 /* ==================================== */
@@ -48,8 +44,7 @@
   width: 900px;
   margin: 0 50px 0;
   padding: 20px 0 0 20px;
-  background-image: url(https://frame-illust.com/fi/wp-content/uploads/2015/01/59b8a166b7ddd8082f3a8faa5793b86e.png);
-  /* box-shadow: 0 0 10px rgb(41 41 41 / 20%); */
+  /* background-image: url(https://frame-illust.com/fi/wp-content/uploads/2015/01/59b8a166b7ddd8082f3a8faa5793b86e.png); */
   background-repeat: no-repeat;
   background-size: 910px 260px;
 
@@ -110,7 +105,6 @@
 
 .tweet-show{
   width: auto;
-  /* text-align: right; */
 }
 
 .tweet-btn{
