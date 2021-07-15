@@ -84,6 +84,7 @@
 .tweet-block{
   display: flex;
   flex-flow: row wrap;
+  background-color: yellow;
 }
 
 .new-link{
@@ -93,7 +94,7 @@
   display: flex;
   font-size: 15px;
   flex-direction: column;
-  /* box-shadow: 0 0 10px rgb(41 41 41); */
+  box-shadow: 0 0 10px rgb(41 41 41);
   margin: 50px;
   color: black;
   background-color: white;
