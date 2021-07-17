@@ -1,0 +1,49 @@
+.top-main{
+  height: 100vh;
+  background: linear-gradient(-135deg, #E4A972, #9941D8);
+}
+
+.login-top-title{
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.top-form{
+  height: 300px;
+  width: 800px;
+  margin: 130px auto 10px;
+  border: 2px double black;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.top-login-btn{
+  height: 30px;
+  width: 110px;
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: black; 
+  display: block;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: blue;
+}
+
+.top-sign-up-btn{
+  height: 30px;
+  width: 110px;
+  font-size: 30px;
+  /* margin: auto; */
+  border: 1px solid black;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: black; 
+  display: block;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: red;
+}

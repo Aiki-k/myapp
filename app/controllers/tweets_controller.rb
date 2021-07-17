@@ -2,6 +2,9 @@ class TweetsController < ApplicationController
   before_action :find_id, only: [:edit, :show]
   before_action :save_method, only: [:create, :update]
 
+  def top
+  end
+
   def index
     @tweet = Tweet.order("created_at DESC")
     @tweet2 = Tweet.order(updated_at: :desc).limit(5)

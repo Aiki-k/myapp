@@ -1,28 +1,22 @@
 <header>
   <div class="header-main">
-      <%= link_to 'Myapp', root_path, class: "header-title" %>
-      <%# <%= link_to current_user.id, "#"%> 
+    <%= link_to "- Top -", "#" ,class: "text" %>
+    <%= link_to "- Curriculum -", "#" ,class: "text" %>
+    <%= link_to '- Myapp -', root_path, class: "header-title" %>
+    <%= link_to "- Text3 -", "tweets/top" ,class: "text" %>
+    <%= link_to "- Text4 -", "#" ,class: "text" %>
   </div>
   <div class="header-sub">
     <ul class="header-ul1">
       <% if user_signed_in? %>
         <li class="header-li"><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-        <li class="header-li"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+        <li class="header-li"><%= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "logout" %></li> 
       <% else %>
-        <li class="header-li"><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-        <li class="header-li"><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+        <li class="header-li"><%= link_to 'sign-in', new_user_session_path, class: "login" %></li>
+        <li class="header-li"><%= link_to 'sign-up', new_user_registration_path, class: "sign-up" %></li>
       <% end %>
     </ul>
   </div>
   <div class="header-menu">
-    <div class="sehrch-form">
-
-    </div>
-    <ul class="header-ul2">
-      <li class="header-btn"><%= link_to "掲示板", "#" ,class: "text1" %></li>
-      <li class="header-btn"><%= link_to "シフト関係", "#" ,class: "text2" %></li>
-      <li class="header-btn"><%= link_to "テキスト3", "#" ,class: "text3" %></li>
-      <li class="header-btn"><%= link_to "テキスト4", "#" ,class: "text4" %></li>
-    </ul>
   </div>
 </header>
