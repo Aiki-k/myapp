@@ -6,17 +6,4 @@
     <%= link_to "- Text3 -", "tweets/top" ,class: "text" %>
     <%= link_to "- Text4 -", "#" ,class: "text" %>
   </div>
-  <div class="header-sub">
-    <ul class="header-ul1">
-      <% if user_signed_in? %>
-        <li class="header-li"><%= link_to current_user.nickname, "#", class: "user-nickname" %></li> 
-        <li class="header-li"><%= link_to 'sign-out', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-      <% else %>
-        <li class="header-li"><%= link_to 'sign-in', new_user_session_path, class: "login" %></li>
-        <li class="header-li"><%= link_to 'sign-up', new_user_registration_path, class: "sign-up" %></li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="header-menu">
-  </div>
 </header>
