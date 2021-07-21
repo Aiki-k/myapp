@@ -6,7 +6,10 @@ header{
 
 .header-main{
   height: 100%;
-  background-image: url("https://www.moriguchi-sports.jp/images/top/top-image01.jpg");
+  width: auto;
+  background-image: url("https://www.moriguchi-sports.jp/images/top/top-image02.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: space-around;
 }

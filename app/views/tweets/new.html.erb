@@ -1,17 +1,27 @@
-<div>
+<div class="tweet-post">
   <h2>新規投稿ページです。
   </h2>
   <%= form_with model: @tweet, local: true do |f| %>
-    <div class="">
-      <div class="">
-        出品画像
-        <span class="">任意</span>
+    <div class="new-edit-form">
+      <div class="post-field">
+        <%= "タイトル"  %>
+        <p><%= f.text_field :title, id:"" %></p>
       </div>
-      <div class="">
-        <%= f.text_area :title, id:"" %>
-        <p><%= f.text_area :text, id:"" %></p>
+      <div class="post-field">
+        <%= "ジャンル" %>
         <p><%= f.collection_select(:genre_id, Genre.all, :id, :name, {})%></p>
-        <p><%= f.submit '投稿する' %>
+      </div>
+      <div class="post-field">
+        <%= "本文" %>
+        <p><%= f.text_area :text, :size=>"60x10", id:"" %></p>
+      </div>
+
+      <div class="post-field">
+        <%= "タグ付け" %>
+        <div class="under-flex">
+          <p><%= f.text_field :tag, placeholder: " 複数個の場合は空白をあけて入力", class:"" %></p>
+          <%= f.submit '投稿する', :size => "30*40", class: "post-btn" %>
+        </div>
       </div>
     </div>
   <% end %>
