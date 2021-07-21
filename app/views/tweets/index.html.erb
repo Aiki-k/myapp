@@ -4,6 +4,8 @@
   </div>
 
   <div class="center">
+    <div class="top-image">
+    </div>
     <div class="title">
       <%= link_to new_tweet_path, class: "post-link" do %>  
       <% end %>
@@ -29,24 +31,7 @@
         <% end %>
       </div>
     </div>
-      
-    <div class="tweet-top" >
-      過去の投稿
-    </div>
-    <div class="tweet-block">
-      <% @tweet.each do |tweet| %>
-        <%= link_to  tweet_path(tweet.id), class: "show-btn" do %>
-          <div class="new-link">
-            <div class="tweet-title" >
-              <%= "○Title"%><br><%= tweet.title %>
-            </div>
-            <div class="tweet-genre">
-              <p><%= "○Genre"%><br><%= tweet.genre.name %></p>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
+
   </div>
 
   <div class="container">

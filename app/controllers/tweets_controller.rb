@@ -5,6 +5,11 @@ class TweetsController < ApplicationController
   def top
   end
 
+  def post
+    @tweet= Tweet.order("created_at DESC")
+  end
+
+
   def index
     @tweet = Tweet.order("created_at DESC")
     @tweet2 = Tweet.order(updated_at: :desc).limit(5)

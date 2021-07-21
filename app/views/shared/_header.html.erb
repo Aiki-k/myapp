@@ -1,9 +1,22 @@
 <header>
-  <div class="header-main">
-    <%= link_to "- Top -", "#" ,class: "text" %>
-    <%= link_to "- Curriculum -", "#" ,class: "text" %>
-    <%= link_to '- Myapp -', root_path, class: "header-title" %>
-    <%= link_to "- Text3 -", "tweets/top" ,class: "text" %>
-    <%= link_to "- Text4 -", "#" ,class: "text" %>
+  <div class="wrapper">
+  </div>
+
+  <div class="center">
+    <%= link_to root_path do %>
+      <div class="main-title">
+        <%= link_to ' 守口市民体育館 ', root_path, class: "header-title" %><br>
+        <%= link_to ' moriguchi citizen gymnasium', root_path, class: "header-title-lb" %>
+      </div>
+    <% end %>
+    <div class="header-list">
+      <%= link_to "- Top -", post_tweets_path ,class: "text" %>
+      <%= link_to "- Curriculum -", "#" ,class: "text" %>
+      <%= link_to "- Text3 -", "tweets/top" ,class: "text" %>
+      <%= link_to "- Text4 -", "#" ,class: "text" %>
+    </div>
+  </div>
+
+  <div class="container">
   </div>
 </header>

@@ -1,0 +1,18 @@
+<%= render "shared/header" %>
+<div class="tweet-top" >
+  過去の投稿
+</div>
+<div class="tweet-block">
+  <% @tweet.each do |tweet| %>
+    <%= link_to  tweet_path(tweet.id), class: "show-btn" do %>
+      <div class="new-link">
+        <div class="tweet-title" >
+          <%= "○Title"%><br><%= tweet.title %>
+        </div>
+        <div class="tweet-genre">
+          <p><%= "○Genre"%><br><%= tweet.genre.name %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
