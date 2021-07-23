@@ -1,0 +1,65 @@
+
+.tweet-top{
+  font-size: 30px;
+  margin-top: 50px;
+  border-bottom: 4px solid greenyellow;
+}
+
+.tweet-block{
+  height: auto;
+  background-color: lightcyan;
+}
+
+.new-link{
+  height: auto;
+  width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px dotted gray;
+  border-radius: 4px;
+  display: flex;
+  font-size: 15px;
+  flex-direction: column;
+  color: black;
+  background-color: white;
+}
+
+.tweet-title{
+  font-size: 25px;
+  width: 780px;
+  border: 1px solid gray;
+}
+
+.tweet-show{
+  width: auto;
+}
+
+.tweet-btn{
+  text-decoration: none;
+}
+
+.tweet-genre{
+  width: 780px;
+  font-size: 18px;
+  margin-top: 20px ;
+  border-bottom: 1px solid;
+}
+
+.tweet-text{
+  font-size: 17px;
+  margin-top: 20px;
+}
+
+.tweet-day{
+  padding-top: 100px;
+}
+.show-btn{
+  text-decoration: none;
+  margin: 200px 30px;
+}
+
+.container{
+  height: auto;
+  width: 15vw;
+  right: 20%;
+}

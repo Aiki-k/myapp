@@ -8,7 +8,6 @@
   display: flex;
   font-size: 30px;
   background-color: white;
-  border: 2px solid gray;
 }
 
 .wrapper{
@@ -48,21 +47,16 @@
 
 /* ==================================== */
 
-.tweet-top{
-  margin-top: 100px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 .new-info{
   height: 250px;
   width: 900px;
   margin: 0 50px 0;
   padding: 20px 0 0 20px;
   border: 2px solid blue;
-  /* background-image: url(https://frame-illust.com/fi/wp-content/uploads/2015/01/59b8a166b7ddd8082f3a8faa5793b86e.png); */
-  /* background-repeat: no-repeat; */
-  /* background-size: 910px 260px; */
+}
 
+.tweet-contents{
+  margin-bottom: 30px;
 }
 
 .top-title{
@@ -91,52 +85,3 @@
 }
 
 /* --------------------------------------- */
-
-.tweet-top{
-  border-bottom: 4px solid greenyellow;
-}
-
-.tweet-block{
-  display: flex;
-  flex-flow: row wrap;
-  background-color: yellow;
-}
-
-.new-link{
-  height: 200px;
-  width: 200px;
-  padding: 20px 0 0 20px;
-  display: flex;
-  font-size: 15px;
-  flex-direction: column;
-  box-shadow: 0 0 10px;
-  margin: 50px;
-  color: black;
-  background: linear-gradient(-135deg, #E4A972, #9941D8);
-}
-
-.tweet-title{
-  width: auto;
-}
-
-.tweet-show{
-  width: auto;
-}
-
-.tweet-btn{
-  text-decoration: none;
-}
-
-.tweet-genre{
-  width: auto;
-}
-
-.show-btn{
-  text-decoration: none;
-}
-
-.container{
-  height: auto;
-  width: 15vw;
-  right: 20%;
-}

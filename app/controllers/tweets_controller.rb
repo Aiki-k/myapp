@@ -9,7 +9,6 @@ class TweetsController < ApplicationController
     @tweet= Tweet.order("created_at DESC")
   end
 
-
   def index
     @tweet = Tweet.order("created_at DESC")
     @tweet2 = Tweet.order(updated_at: :desc).limit(5)
@@ -20,7 +19,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    if @tweet.save
+    if @tweet.save(tweet_params)
       redirect_to root_path
     else
       render :new
