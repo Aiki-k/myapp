@@ -2,12 +2,34 @@
 <div class="wrapper">
 </div>
 
+タグリスト
+
+<% @tag_list.each do |list| %>
+<%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
+<%= "(#{list.posts.count})" %>
+<% end %>
+
+投稿する
+
+
+<%= form_with(model: @tweet, url: tweets_path, local: true) do |f| %>
+<% end %>
+
+投稿一覧
+
+<% @tweets.each do |post| %>
+<%= link_to tweet.content, tweet %>
+<% end %>
+
+
+
 <div class="center">
+
   <div class="tweet-top" >
     ○投稿一覧
   </div>
   <div class="tweet-block">
-    <% @tweet.each do |tweet| %>
+    <% @tweets.each do |tweet| %>
       <%= link_to  tweet_path(tweet.id), class: "show-btn" do %>
         <div class="new-link">
           <div class="tweet-title" >
@@ -27,5 +49,6 @@
     <% end %>
   </div>
 </div>
+
 
 <%= render "shared/footer"%>

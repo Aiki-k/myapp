@@ -10,9 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_08_094508) do
+ActiveRecord::Schema.define(version: 2021_07_27_072925) do
 
   create_table "checks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "tweet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tweet_id"], name: "index_checks_on_tweet_id"
+    t.index ["user_id"], name: "index_checks_on_user_id"
+  end
+
+  create_table "tag_maps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "tweet_id", null: false
+    t.bigint "tag_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tag_id"], name: "index_tag_maps_on_tag_id"
+    t.index ["tweet_id"], name: "index_tag_maps_on_tweet_id"
+  end
+
+  create_table "tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "tag_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -21,6 +40,7 @@ ActiveRecord::Schema.define(version: 2021_07_08_094508) do
     t.string "title", null: false
     t.string "text", null: false
     t.integer "genre_id", null: false
+    t.string "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -38,4 +58,8 @@ ActiveRecord::Schema.define(version: 2021_07_08_094508) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "checks", "tweets"
+  add_foreign_key "checks", "users"
+  add_foreign_key "tag_maps", "tags"
+  add_foreign_key "tag_maps", "tweets"
 end

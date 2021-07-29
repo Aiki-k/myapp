@@ -6,7 +6,9 @@ class TweetsController < ApplicationController
   end
 
   def post
-    @tweet= Tweet.order("created_at DESC")
+    # @tweet= Tweet.order("created_at DESC")
+    @tag_list = Tag.all
+    @tweets = Tweet.all
   end
 
   def index
@@ -15,15 +17,25 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = Tweet.new
+    # @tweet = Tweet.new
+    @tweet = current_user.tweets.new
   end
 
   def create
-    if @tweet.save(tweet_params)
+    @tweet = current_user.tweets.new(tweet_params)
+    tag_list = params[:tweet][:tag_name].split(nil)
+    if @tweet.save
+      @tweet.save_tag(tag_list)
       redirect_to root_path
     else
       render :new
     end
+    # @tweet = Tweet.new(tweet_params)
+    # if @tweet.save
+    #   redirect_to root_path
+    # else
+    #   render :new
+    # end
   end
 
   def edit
@@ -38,6 +50,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @tweet = Tweet.find(params[:id])
+    @tweet_tags = @tweet.tags
   end
 
   def search

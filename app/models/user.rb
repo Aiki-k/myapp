@@ -4,8 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :tweets
-  has_many :checks
+  has_many :tweets, dependent: :destroy
+  # has_many :checks
 
   with_options presence: true do
     validates :username
