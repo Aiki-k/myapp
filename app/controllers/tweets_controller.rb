@@ -17,11 +17,11 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = current_user.tweet.new
+    @tweet = Tweet.new
   end
 
   def create
-    @tweet = current_user.tweets.new(tweet_params)
+    @tweet = Tweet.new(tweet_params)
     tag_list = params[:tweet][:tag_name].split(nil)
     if @tweet.save
       @tweet.save_tag(tag_list)
