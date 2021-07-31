@@ -17,7 +17,7 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = current_user.tweets.new
+    @tweet = current_user.tweet.new
   end
 
   def create
