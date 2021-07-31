@@ -2,28 +2,24 @@
 <div class="wrapper">
 </div>
 
-タグリスト
 
-<% @tag_list.each do |list| %>
-<%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
-<%= "(#{list.posts.count})" %>
-<% end %>
-
-投稿する
-
-
-<%= form_with(model: @tweet, url: tweets_path, local: true) do |f| %>
-<% end %>
-
-投稿一覧
-
-<% @tweets.each do |post| %>
-<%= link_to tweet.content, tweet %>
-<% end %>
 
 
 
 <div class="center">
+
+<%= "タグリスト" %><br>
+<% @tag_list.each do |list| %>
+  <%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
+  <%= "(#{list.tweets.count})" %>
+<% end %>
+
+
+投稿一覧
+
+<%# <% @tweets.each do |tweet| %> %>
+<%# <%= link_to tweet.content, tweet %> %>
+<%# <% end %> %>
 
   <div class="tweet-top" >
     ○投稿一覧

@@ -17,7 +17,7 @@ class Tweet < ApplicationRecord
 
     new_tags.each do |new|
       new_post_tag = Tag.find_or_create_by(tag_name: new)
-      self.post_tags << new_post_tag
+      self.tags << new_post_tag
     end
   end
 

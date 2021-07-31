@@ -17,7 +17,6 @@ class TweetsController < ApplicationController
   end
 
   def new
-    # @tweet = Tweet.new
     @tweet = current_user.tweets.new
   end
 
@@ -55,8 +54,9 @@ class TweetsController < ApplicationController
   end
 
   def search
-    #Viewのformで取得したパラメータをモデルに渡す
-    @posts = Tweet.search(params[:search])
+    @tag_list = Tag.all  #こっちの投稿一覧表示ページでも全てのタグを表示するために、タグを全取得
+    @tag = Tag.find(params[:tag_id])  #クリックしたタグを取得
+    @tweets = @tag.tweets.all           #クリックしたタグに紐付けられた投稿を全て表示
   end
 
   private
