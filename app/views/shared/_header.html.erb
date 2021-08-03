@@ -3,12 +3,19 @@
   </div>
 
   <div class="center">
-    <%= link_to root_path do %>
-      <div class="main-title">
-        <%= link_to ' 守口市民体育館 ', root_path, class: "header-title" %><br>
-        <%= link_to ' moriguchi citizen gymnasium', root_path, class: "header-title-lb" %>
-      </div>
-    <% end %>
+    <div class="header-head">
+      <%= link_to root_path do %>
+        <div class="main-title">
+          <%= link_to ' 守口市民体育館 ', root_path, class: "header-title" %><br>
+          <%= link_to ' moriguchi citizen gymnasium', root_path, class: "header-title-lb" %>
+        </div>
+      <% end %>
+      <% if user_signed_in? %>
+        <div class="header-username">
+          <%= "こんにちは、" %><%= link_to current_user.username, "#", class: "header-name-link" %><%= "さん！" %>
+        </div>
+      <% end %>
+    </div>
     <div class="header-list">
       <%= link_to "- 共有 -", post_tweets_path ,class: "text" %>
       <%= link_to "- シフト調整 -", "#" ,class: "text" %>

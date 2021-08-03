@@ -1,6 +1,8 @@
 class TweetsController < ApplicationController
+  # before_action :authenticate_user!, except: [:top]
   before_action :find_id, only: [:edit, :show]
   before_action :save_method, only: [:create, :update]
+  before_action :top_redirect, except: :top
 
   def top
   end
@@ -17,11 +19,11 @@ class TweetsController < ApplicationController
   end
 
   def new
-    @tweet = Tweet.new
+    # @tweet = current_user.Tweet.new
   end
 
   def create
-    @tweet = Tweet.new(tweet_params)
+    @tweet = current_user.tweets.new(tweet_params)
     tag_list = params[:tweet][:tag_name].split(nil)
     if @tweet.save
       @tweet.save_tag(tag_list)
@@ -29,12 +31,6 @@ class TweetsController < ApplicationController
     else
       render :new
     end
-    # @tweet = Tweet.new(tweet_params)
-    # if @tweet.save
-    #   redirect_to root_path
-    # else
-    #   render :new
-    # end
   end
 
   def edit
@@ -70,5 +66,12 @@ class TweetsController < ApplicationController
 
   def save_method
     @tweet = Tweet.new(tweet_params)
+  end
+
+  def top_redirect
+    if user_signed_in?
+    else
+      redirect_to "/tweets/top"
+    end
   end
 end

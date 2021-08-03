@@ -2,18 +2,9 @@
 <div class="main">
   <div class="wrapper">
 
-  <% if user_signed_in? %>
-    <%= link_to "ログアウト",destroy_user_session_path, method: :delete  %>
-  <% end %>
   </div>
 
   <div class="center">
-  <% if user_signed_in? %>
-    <%= current_user.username %><%= "さん" %>
-  <% end %>
-
-
-
     <div class="top-image">
     </div>
     <div class="title">

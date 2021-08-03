@@ -1,6 +1,9 @@
 .top-main{
   height: 100vh;
-  background: linear-gradient(-135deg, #E4A972, #9941D8);
+  color: white;
+  padding-top: 70px;
+  background-color: black;
+  /* background: linear-gradient(-135deg, #E4A972, #9941D8); */
 }
 
 .login-top-title{
@@ -13,37 +16,41 @@
 .top-form{
   height: 300px;
   width: 800px;
-  margin: 130px auto 10px;
-  border: 2px double black;
+  margin: 50px auto 10px;
   text-align: center;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.top-login-btn{
-  height: 30px;
-  width: 110px;
+.top-sign-up-btn{
+  height: auto;
+  width: auto;
   font-size: 30px;
-  border: 1px solid black;
-  padding: 10px 30px;
+  padding: 10px 100px;
+  border: 1px solid lightblue;
+  border-radius: 50px;
   text-decoration: none;
-  color: black; 
+  color: aqua;
   display: block;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: blue;
+  background-color: gray;
 }
 
-.top-sign-up-btn{
-  height: 30px;
-  width: 110px;
+.top-login-btn{
+  height: auto;
+  width: auto;
   font-size: 30px;
-  /* margin: auto; */
-  border: 1px solid black;
-  padding: 10px 30px;
+  padding: 10px 100px;
+  border: 1px solid lightblue;
+  border-radius: 50px;
   text-decoration: none;
-  color: black; 
+  color: aqua;
   display: block;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: red;
+  background-color: gray;
+}
+
+.sign_in_text{
+  font-size: 50px;
 }

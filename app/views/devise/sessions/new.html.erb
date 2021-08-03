@@ -2,12 +2,12 @@
 ログイン画面
   <div class="fields">
 
-  <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+  <%= form_with model: @user, url: user_session_path, local: true do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-      <%= f.label :ユーザー名 %><br />
-      <%= f.text_field :username, autofocus: true, autocomplete: "email" %>
+      <%= f.label :Email（メールアドレス） %><br />
+      <%= f.text_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
     <div class="field">
@@ -25,4 +25,4 @@
   </div>
 </div>
 
-<%= render "devise/shared/links" %>
+<%# <%= render "devise/shared/links" %> 

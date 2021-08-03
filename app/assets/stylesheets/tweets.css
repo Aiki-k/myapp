@@ -57,6 +57,7 @@
   margin: 0 50px 0;
   padding: 20px 0 0 20px;
   border: 2px solid blue;
+  background: linear-gradient(-135deg, rgb(204, 212, 204), rgb(232, 135, 135));
 }
 
 .tweet-contents{

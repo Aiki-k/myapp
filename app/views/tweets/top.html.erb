@@ -1,7 +1,14 @@
 <div class="top-main">
-  <h2 class="login-top-title">Myapp<br>職員用システム</h2>
+  <h2 class="login-top-title">Hello! Welcome to mypage.<br>Please log in first！</h2>
   <div class="top-form">
-    <%= link_to 'sign-up', new_user_registration_path, class: "top-sign-up-btn" %>
-    <%= link_to 'sign-in', new_user_session_path, class: "top-login-btn" %>
+    <% if user_signed_in? %>
+      <div class="sign_in_text" >
+        <%= "あなたは#{current_user.username}さんです。" %>
+      </div>
+    <% else %>
+      <%= link_to '新規登録', new_user_registration_path, class: "top-sign-up-btn" %>
+      <%= link_to 'ログイン', new_user_session_path, class: "top-login-btn" %>
+    <% end %>
+      
   </div>
 </div>

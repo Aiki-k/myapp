@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tweets, dependent: :destroy
-  # has_many :checks
 
   with_options presence: true do
     validates :username
