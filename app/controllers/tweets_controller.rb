@@ -8,7 +8,7 @@ class TweetsController < ApplicationController
   end
 
   def post
-    # @tweet= Tweet.order("created_at DESC")
+    @tweet= Tweet.order("created_at DESC")
     @tag_list = Tag.all
     @tweets = Tweet.all
   end
@@ -19,7 +19,7 @@ class TweetsController < ApplicationController
   end
 
   def new
-    # @tweet = current_user.Tweet.new
+    @tweet = Tweet.new
   end
 
   def create
@@ -57,7 +57,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:title, :text, :genre_id)
+    params.require(:tweet).permit(:title, :text, :genre_id, :image).merge(user_id: current_user.id)
   end
 
   def find_id

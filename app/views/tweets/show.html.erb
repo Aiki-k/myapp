@@ -5,15 +5,20 @@
   </div>
 
   <div class="show-center">
-    <div class="tweet-link">
-      <div class="show-tweet-title" >
-        <%= "タイトル："%><%= @tweet.title %>
-      </div>
-      <div class="show-tweet-genre">
-        <p><%= "ジャンル："%><%= @tweet.genre.name %></p>
-      </div>
-      <div class="show-tweet-text">
-        <p><%= "内容：" %><%= @tweet.text %></p>
+    <div class="tweet-show-news">
+      お知らせ
+    </div>
+    <div class="show-block">
+      <div class="tweet-link">
+        <div class="show-tweet-title" >
+          <span class="title-lan"><%= "タイトル："%></span><%= @tweet.title %>
+        </div>
+        <div class="show-tweet-text">
+          <p><%= "内容：" %><%= @tweet.text %></p>
+        </div>
+        <div class="show-tweet-genre">
+          <p><%= "ジャンル："%><%= @tweet.genre.name %></p>
+        </div>
       </div>
     </div>
   </div>

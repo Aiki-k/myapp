@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     collection do
       get 'top'
       get 'post'
+      post 'post'
     end
   end
 

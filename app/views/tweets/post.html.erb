@@ -2,10 +2,6 @@
 <div class="wrapper">
 </div>
 
-
-
-
-
 <div class="center">
 
 <%= "タグリスト" %><br>
@@ -13,26 +9,28 @@
   <%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
   <%= "(#{list.tweets.count})" %>
 <% end %>
-
-
-投稿一覧
-
-<%# <% @tweets.each do |tweet| %> %>
-<%# <%= link_to tweet.content, tweet %> %>
-<%# <% end %> %>
-
   <div class="tweet-top" >
-    ○投稿一覧
+    ○お知らせ
   </div>
   <div class="tweet-block">
+
+  <% if @tweets.nil? %>
+    <div class="new-link">
+      <div class="tweet-title" >
+        <%= "ツイートを投稿しよう！" %>
+      </div>
+      <div class="tweet-text">
+        <%= "ここに内容が表示されます！" %>
+      </div>
+      <div class="tweet-day">
+      </div>
+    </div>
+  <% else %>
     <% @tweets.each do |tweet| %>
       <%= link_to  tweet_path(tweet.id), class: "show-btn" do %>
         <div class="new-link">
           <div class="tweet-title" >
             <%= tweet.title %>
-          </div>
-          <div class="tweet-genre">
-            <p><%= "ジャンル：" %><%= tweet.genre.name %></p>
           </div>
           <div class="tweet-text">
             <%= tweet.text %>
@@ -43,6 +41,7 @@
         </div>
       <% end %>
     <% end %>
+  <% end %>
   </div>
 </div>
 

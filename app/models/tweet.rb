@@ -5,6 +5,7 @@ class Tweet < ApplicationRecord
   has_many :checks
   has_many :tag_maps, dependent: :destroy
   has_many :tags, through: :tag_maps
+  has_one_attached :image
 
   def save_tag(sent_tags)
     current_tags = self.tags.pluck(:tag_name) unless self.tags.nil?
