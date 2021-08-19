@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   # before_action :authenticate_user!, except: [:top]
-  before_action :find_id, only: [:edit, :show]
+  before_action :find_id, only: [:edit, :update, :show, :destroy]
   before_action :save_method, only: [:create, :update]
   before_action :top_redirect, except: :top
 
@@ -44,7 +44,13 @@ class TweetsController < ApplicationController
     end
   end
 
+  def destroy
+    @tweet.destroy
+    redirect_to root_path
+  end
+
   def show
+    @tweets = Tweet.all
     @tweet = Tweet.find(params[:id])
     @tweet_tags = @tweet.tags
   end

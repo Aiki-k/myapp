@@ -8,6 +8,8 @@ Rails.application.routes.draw do
       get 'top'
       get 'post'
       post 'post'
+      get 'shift'
+      post 'shift'
     end
   end
 

@@ -1,4 +1,20 @@
 
+
+.post-post{
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  height: 45px;
+  width: 120px;
+  border-radius: 30px;
+  text-align: center;
+  background-color: red;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  display: block;
+}
+
 .tweet-top{
   font-size: 30px;
   margin-top: 50px;
@@ -51,14 +67,20 @@
 .tweet-text{
   color: gray;
   font-size: 18px;
-  margin-top: 20px;
+  margin: 20px 0 50px;
 }
 
 .tweet-day{
   color: grey;
   margin: auto 0 0 auto;
-  padding-top: 100px;
+  padding-top: 50px;
 }
+
+.tweet-image{
+  height: auto;
+  width: 900px;
+}
+
 .show-btn{
   text-decoration: none;
   margin: 200px 30px;

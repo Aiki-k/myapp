@@ -19,6 +19,11 @@
         <div class="show-tweet-genre">
           <p><%= "ジャンル："%><%= @tweet.genre.name %></p>
         </div>
+        <div class="edit-btn">
+          <%= link_to "内容修正",edit_tweet_path(@tweet) %>
+          <%= link_to "追記・変更", edit_tweet_path(@tweet) %>
+          <%= link_to "削除",tweet_path(@tweet), method: :delete %>
+        </div>
       </div>
     </div>
   </div>

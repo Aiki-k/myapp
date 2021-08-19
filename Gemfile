@@ -60,3 +60,6 @@ gem 'devise'
 gem 'devise-i18n'
 
 gem 'jquery-rails'
+
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'

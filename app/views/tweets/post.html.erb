@@ -3,24 +3,28 @@
 </div>
 
 <div class="center">
+  <%= "タグリスト" %><br>
+  <% @tag_list.each do |list| %>
+    <%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
+    <%= "(#{list.tweets.count})" %>
+  <% end %>
 
-<%= "タグリスト" %><br>
-<% @tag_list.each do |list| %>
-  <%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
-  <%= "(#{list.tweets.count})" %>
-<% end %>
+  <%= link_to new_tweet_path, class: "post-post" do %>
+    <%= "投稿" %>
+  <% end %>
+
   <div class="tweet-top" >
-    ○お知らせ
+    ○お知らせ（投稿をクリックすると詳細ページへ飛びます。）
   </div>
   <div class="tweet-block">
 
-  <% if @tweets.nil? %>
+  <% if @tweet.blank? %>
     <div class="new-link">
       <div class="tweet-title" >
         <%= "ツイートを投稿しよう！" %>
       </div>
       <div class="tweet-text">
-        <%= "ここに内容が表示されます！" %>
+        <%= "ここに内容が表示されます。" %>
       </div>
       <div class="tweet-day">
       </div>
@@ -34,6 +38,9 @@
           </div>
           <div class="tweet-text">
             <%= tweet.text %>
+          </div>
+          <div>
+            <%= image_tag tweet.image, class: "tweet-image"%>
           </div>
           <div class="tweet-day">
             <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
