@@ -12,7 +12,7 @@
 }
 
 .show-block{
-  height: auto;
+  height: 530px;
   left: 0;
   right: 0;
   margin-bottom: 80px;
@@ -47,22 +47,52 @@
   font-size: 50px;
 }
 
-
+.show-left-brock{
+  height: auto;
+  display: flex;
+  position: relative;
+}
 .show-tweet-genre{
   width: auto;
   margin: auto 0 0 auto;
-  /* border-left: 5px solid grey; */
   padding-right: 30px;
-  /* background-color: lightcoral; */
   font-size: 20px;
 }
 
-.show-tweet-text{
-  height: 300px;
+.show-tweet-text {
+  height: auto;
   width: auto;
   margin: 0 20px 20px 0;
-  /* border-left: 5px solid grey; */
   padding-left: 10px;
-  /* background-color: lightyellow; */
   font-size: 20px;
+}
+
+.show-tweet-genre{
+  height: auto;
+  width: auto;
+  margin: 0 20px 20px 0;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.edit-btn{
+  height: auto;
+  width: auto;
+  margin: 0 20px 20px 0;
+  padding-left: 10px;
+  font-size: 20px;
+  position: absolute;
+}
+
+.show-tweet-image{
+  position: absolute;
+  right: 20px;
+  height: 400px;
+  width: 400px;
+}
+
+.show-image{
+  height: 400px;
+  width: 400px;
+  border-radius: 25px;
 }

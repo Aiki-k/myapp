@@ -16,7 +16,7 @@
 }
 
 .center{
-  height: auto;
+  /* height: auto; */
   width: 70%;
   left: 0;
   right: 0;
@@ -25,7 +25,7 @@
 }
 
 .top-image{
-  height: 500px;
+  height: 400px;
   width: auto;
   border: 1px solid black;
   background-image: url("https://www.moriguchi-sports.jp/images/top/top-image02.jpg");
@@ -78,7 +78,6 @@
 
 .t-title{
   margin: 10px 0 0 50px;
-  ;
 }
 
 .t-updated_at{

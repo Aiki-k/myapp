@@ -11,4 +11,27 @@ window.addEventListener('load', () => {
       window['btn' + i].style.color = "black"
     });
   };
+
+  const showLink = document.querySelectorAll(".show-link");
+  const tweetTitle = document.getElementById("tweet-title");
+  for (let x = 1; x < 2; x++) {
+    showLink.addEventListener('mousemove',() => {
+      tweetTitle.style.color = "lightblue"
+    });
+    showLink.addEventListener('mouseout',() => {
+      tweetTitle.style.color = "black"
+    });
+  }
+});
+
+window.addEventListener('load', () => {
+
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const check = document.getElementById("check");
+  check.onclick = function() {
+    let name = prompt('あなたの名前は何ですか？');
+    alert('こんにちは、' + name + 'さん、初めまして！');
+  };
 });

@@ -63,3 +63,7 @@ gem 'jquery-rails'
 
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+gem 'haml_rails'
+
+gem 'pry-rails'

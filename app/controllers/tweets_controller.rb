@@ -8,9 +8,10 @@ class TweetsController < ApplicationController
   end
 
   def post
-    @tweet= Tweet.order("created_at DESC")
     @tag_list = Tag.all
-    @tweets = Tweet.all
+    @tweets = Tweet.all.order("created_at DESC")
+    @check = Check.new
+
   end
 
   def index
@@ -50,9 +51,11 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @tweets = Tweet.all
     @tweet = Tweet.find(params[:id])
     @tweet_tags = @tweet.tags
+    if status == 200
+      Check.create(user_id: current_user.id, tweet_id: @tweet.id)
+    end
   end
 
   def search
@@ -79,5 +82,9 @@ class TweetsController < ApplicationController
     else
       redirect_to "/tweets/top"
     end
+  end
+
+  def check_params
+    params.require(:check).merge(user_id: current_user.id, item_id: params[:item_id])
   end
 end

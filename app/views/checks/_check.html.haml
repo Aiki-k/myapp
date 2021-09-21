@@ -1,0 +1,36 @@
+- if user_signed_in?
+  - if current_user.checks.find_by(tweet_id: tweet.id)
+    = link_to tweet_checks_path(tweet.id), method: :delete, remote: true do
+      .icon
+        = icon('fa', 'star')
+      .text
+        = 'いいね!'
+      .count
+        = tweet.checks.count
+  - else
+    = link_to tweet_checks_path(tweet.id), method: :post, remote: true do
+      .icon
+        = icon('far', 'star')
+      .text
+        = 'いいね!'
+      .count
+        = tweet.checks.count
+- else
+  = link_to new_user_session_path do
+    .icon
+      = icon('far', 'star')
+    .text
+      = 'いいね!'
+    .cnunt
+      = tweet.checks.count
+<% if user_signed_in? %>
+  <% if current_user.checks.find_by(tweet_id: tweet.id) %>
+    <% link_to tweet_checks_path(tweet.id), method: :delete, remote: true do %>
+      <div id="check-btn", class="check-btn">
+        <%= "チェックしました！" %>
+      </div>
+    <% end %>
+  <% else %>
+  <% end %>
+<% else %>
+<% end %>

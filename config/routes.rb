@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'tweets#index'
   resources :tweets do
-    resources :checks
     collection do
       get 'top'
       get 'post'
@@ -11,9 +10,13 @@ Rails.application.routes.draw do
       get 'shift'
       post 'shift'
     end
+    resource :checks, only: [:create, :destroy]
   end
 
   resources :tags do
     get 'posts', to: 'posts#search'
   end
+
+  get 'posts/:id', to: 'checks#checked'
+  
 end
