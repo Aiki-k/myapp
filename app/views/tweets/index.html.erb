@@ -14,19 +14,19 @@
     
     <div class="tweet-contents">
       <div class="top-title">
-        最新投稿
+        新着投稿
       </div>
       <div class="new-info" >
         <% @tweet2.each do |t| %>
             <%= link_to tweet_path(t.id), class: "link" do %> 
-              <ul class="new-tweet" >
-                <li class="t-title" >
+              <div class="new-tweet" >
+                <div class="t-title" >
                   <%= t.title %>
-                </li>
+                </div>
                 <div class="t-updated_at" >
                   <%= t.updated_at.strftime("%Y-%m-%d %H:%M") %>
                 </div>
-              </ul>
+              </div>
             <% end %>
         <% end %>
       </div>
