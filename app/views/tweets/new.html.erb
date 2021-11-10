@@ -10,7 +10,7 @@
         <div class="new-edit-form">
           <div class="post-field">
             <%= "画像"  %>
-            <p><%= f.file_field :image, id:"" %></p>
+            <p><%= f.file_field :image, class:"" %></p>
           </div>
           <div class="post-field">
             <%= "タイトル"  %>
@@ -22,11 +22,11 @@
           </div>
           <div class="post-field">
             <%= "本文" %>
-            <p><%= f.text_area :text, :size=>"60x10", id:"" %></p>
+            <p><%= f.text_area :text, :size=>"60x10",  class:"", maxlength: "6" %></p>
           </div>
           <div class="post-field">
             <%= "タグ付け" %>
-            <p><%= f.text_field :tag_name, placeholder: " 複数個の場合は空白をあけて入力", class:"" %></p>
+            <p><%= f.text_field :tag_name, placeholder: " 複数個の場合は半角スペースをあけて入力", class:"" %></p>
           <div class="under-flex">
 
           <%= f.submit '投稿する', :size => "30*40", class: "post-btn" %>

@@ -2,25 +2,23 @@
   <div class="wrapper">
   </div>
 
-  <div class="center">
+  <div class="header-center">
     <div class="header-head">
       <%= link_to root_path do %>
         <div class="main-title">
-          <%= link_to ' 守口市民体育館 ', root_path, class: "header-title" %><br>
+          <%= link_to ' 株式会社〇〇 スタッフ情報共有サイト ', root_path, class: "header-title" %><br>
           <%= link_to ' moriguchi citizen gymnasium', root_path, class: "header-title-lb" %>
         </div>
       <% end %>
       <% if user_signed_in? %>
         <div class="header-username">
-          <%= "こんにちは、" %><%= link_to current_user.username, "#", class: "header-name-link" %><%= "さん！" %>
+          <%= "こんにちは、" %><%= link_to current_user.username, "/users/#{current_user.id}", class: "header-name-link" %><%= "さん！" %>
         </div>
       <% end %>
     </div>
     <div class="header-list">
-      <%= link_to "- 共有 -", post_tweets_path, id: "btn1", class: "text" %>
-      <%= link_to "- シフト調整 -", "#" ,id: "btn2",class: "text" %>
-      <%= link_to "- 職員登録 -", top_tweets_path,id: "btn3",class: "text" %>
-      <%# <%= link_to "- Text4 -", "#" ,id: "btn4",class: "text" %> 
+      <%= link_to "- お知らせ -", post_tweets_path, id: "btn1", class: "text" %>
+      <%= link_to "- 登録スタッフ -", top_tweets_path,id: "btn2",class: "text" %>
     </div>
   </div>
 

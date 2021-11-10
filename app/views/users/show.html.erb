@@ -1,0 +1,62 @@
+<%= render "shared/header" %>
+<div class="wrapper">
+</div>
+
+<div class="center">
+
+  <div class="show-title">
+    <%= @nickname %><span style="font-size:30px"><%= "さんのマイページ" %></span>
+  </div><hr class="hr-show">
+
+
+  <div class="contents row">
+    <% @tweets.each do |tweet| %>
+      <%= link_to tweet_path(tweet), id: "show-link", class: "show-link" do %>
+        <% if Check.exists?(user_id: current_user.id, tweet_id: tweet.id) %>
+          <div class="old-link">
+            <div id="tweet-title" class="tweet-title" >
+              <%= tweet.title %>
+            </div>
+            <div class="tweet-text">
+              <%= tweet.text %>
+            </div>
+            <div class="tweet-under">
+              <div class="poster">
+                <%= "投稿者：" %><%= tweet.user.username %>
+              </div>
+              <div class="tweet-day">
+                <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
+              </div>
+            </div>
+            <div class="right-tweet">
+              <%= image_tag tweet.image, class: "tweet-image" %>
+            </div>
+          </div>
+        <% else %>
+          <div class="new-link">
+            <div id="tweet-title" class="tweet-title" >
+              <%= tweet.title %>
+            </div>
+            <div class="tweet-text">
+              <%= tweet.text %>
+            </div>
+            <div class="tweet-under">
+              <div class="poster">
+                <%= "投稿者：" %><%= tweet.user.username %>
+              </div>
+              <div class="tweet-day">
+                <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
+              </div>
+            </div>
+            <div class="right-tweet">
+              <%= image_tag tweet.image, class: "tweet-image" %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= render "shared/footer" %>

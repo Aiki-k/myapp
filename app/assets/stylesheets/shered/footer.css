@@ -1,6 +1,45 @@
 footer{
-  height: 100px;
-  background-color: lightgray;
-  font-family: 'arial black';
+  height: 220px;
+  width: auto;
+  background-color: gray;
+  /* font-family: 'arial black'; */
   text-decoration: none;
+}
+
+.f-link{
+  color: black;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+
+.f-news{
+  color: white;
+}
+
+.f-sign_in{
+  color: white;
+}
+
+.f-company{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.f-company-info{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.f-user{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.f-username{
+  color: white;
 }

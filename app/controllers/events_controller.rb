@@ -19,7 +19,7 @@ def destroy
 end
 
 private
-def event_params
-    params.require(:event).permit(:title, :start, :end, :user_id, :body)
-end
+    def event_params
+        params.require(:event).permit(:title, :start, :end, :user_id, :body)
+    end
 end

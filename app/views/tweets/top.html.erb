@@ -1,14 +1,30 @@
 <div class="top-main">
-  <h2 class="login-top-title">Hello! Welcome to mypage.<br>Please log in first！</h2>
-  <div class="top-form">
-    <% if user_signed_in? %>
-      <div class="sign_in_text" >
-        <%= "あなたは#{current_user.username}さんです。" %>
-      </div>
-    <% else %>
+
+  <% if user_signed_in? %>
+    <div class="sign_in_text" >
+      <%= "現在のログインユーザー：#{current_user.username}" %>
+    </div><br>
+    
+    <div class="users" >
+      <%= "現在登録されているユーザー" %><hr>
+        <% @user.each do |u| %>
+          <div class="user-each">
+            <div class="user-id">
+              <%= "#{u.id}：" %>
+            </div>
+            <div>
+              <%= u.username %><br>
+            </div>
+          </div>
+        <% end %>
+
+    </div>
+
+  <% else %>
+    <h2 class="login-top-title">Hello! Welcome to mypage.<br>Please log in first！</h2>
+    <div class="top-form">
       <%= link_to '新規登録', new_user_registration_path, class: "top-sign-up-btn" %>
       <%= link_to 'ログイン', new_user_session_path, class: "top-login-btn" %>
-    <% end %>
-      
-  </div>
+    </div>
+  <% end %>
 </div>

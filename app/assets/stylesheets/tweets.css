@@ -2,17 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/ */
 
+
 .main{
   height: auto;
   width: auto;
   display: flex;
   font-size: 30px;
-  background-color: white;
+  /* background-color: white; */
 }
 
 .wrapper{
   height: auto;
   width: 15vw;
+  /* background-color: ivory; */
 }
 
 .center{
@@ -21,8 +23,16 @@
   left: 0;
   right: 0;
   margin: auto;
+  margin-bottom: 30px;
+  padding: 50px;
   position: relative;
+  background-color: ivory;
+  box-shadow: 0 0 8px gray;
 }
+
+/* .container{
+  background-color: ivory;
+} */
 
 .top-image{
   height: 400px;
@@ -31,6 +41,7 @@
   background-image: url("https://www.moriguchi-sports.jp/images/top/top-image02.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow:5px 5px gray;
 }
 
 .title{
@@ -53,12 +64,12 @@
 }
 
 .new-info{
-  height: 250px;
+  height: 240px;
   width: auto;
   margin: 0 50px 0;
   padding: 20px 0 0 20px;
-  border: 2px solid blue;
-  background: linear-gradient(-135deg, rgb(204, 212, 204), rgb(232, 135, 135));
+  background-color: white;
+  box-shadow:5px 5px gray;
 }
 
 .tweet-contents{
@@ -71,22 +82,29 @@
 }
 
 .new-tweet{
+  border-bottom: 1px solid gray;
+  margin: 2px auto;
   font-size: 20px;
   display: flex;
   list-style-type: disc;
 }
 
 .t-title{
-  margin: 10px 0 0 50px;
+  margin: 10px auto auto 60px;
+  color: deepskyblue;
 }
 
 .t-updated_at{
-  margin: 10px 60px 0 auto;
+  margin: 10px 0 0 30px;
+  color: gray;
 }
 
 .link{
   color: black;
+  background-color: lightgray;
   text-decoration: none;
 }
+
+
 
 /* --------------------------------------- */

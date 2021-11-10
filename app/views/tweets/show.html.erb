@@ -9,30 +9,26 @@
       お知らせ
     </div>
     <div class="show-block">
-      <div class="tweet-link">
-        <div class="show-tweet-title" >
-          <%= @tweet.title %>
+      <div class="show-tweet-title" >
+        <%= @tweet.title %>
+      </div>
+      <div class="show-tweet-main">
+        <div class="show-tweet-text" >
+          <%= @tweet.text %>
         </div>
-        <div class="show-left-brock">
-          <div class="show-tweet-main">
-            <div class="show-tweet-text" >
-              <%= @tweet.text %>
-            </div>
-            <div class="show-tweet-genre">
-              <p><%= "ジャンル："%><%= @tweet.genre.name %></p>
-            </div>
-            <div class="edit-btn">
-              <%= link_to "内容修正",edit_tweet_path(@tweet) %>
-              <%= link_to "追記・変更", edit_tweet_path(@tweet) %>
-              <%= link_to "削除",tweet_path(@tweet), method: :delete %>
-            </div>
-          </div>
-          <div class="show-tweet-image">
-            <%= image_tag @tweet.image, class: "show-image"%> 
-          </div>
+        <div class="show-tweet-image">
+          <%= image_tag @tweet.image, class: "show-image"%> 
         </div>
       </div>
+      <div class="show-tweet-poster">
+        <p><%= "投稿者："%><%= @tweet.user.username %></p>
+      </div>
+      <div class="edit-btn">
+        <%= link_to "追記・変更", edit_tweet_path(@tweet) %>
+        <%= link_to "削除",tweet_path(@tweet), method: :delete %>
+      </div>
     </div>
+      <%= link_to "戻る", :back %>
   </div>
 
   <div class="container">

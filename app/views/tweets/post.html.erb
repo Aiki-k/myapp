@@ -5,78 +5,78 @@
 <div class="center">
   <%= "タグリスト" %><br>
   <% @tag_list.each do |list| %>
-    <%= link_to list.tag_name, tag_posts_path(tag_id: list.id) %>
-    <%= "(#{list.tweets.count})" %>
+      <%= link_to list.tag_name, tag_posts_path(tag_id: list.id), class: "tag_lists" %>
+      <%= "(#{list.tweets.count})" %>
   <% end %>
+  <%# タグのURL＝tag_posts_path(tag_id: list.id) %>
 
   <%= link_to new_tweet_path, class: "post-post" do %>
     <%= "投稿" %>
   <% end %>
 
-  <div class="tweet-top" >
-    ○News
-  </div>
-  <div class="tweet-block">
-    <% if @tweets.blank? %>
-      <div class="new-link">
-        <div class="tweet-title" >
-          <%= "ツイートを投稿しよう！" %>
-        </div>
-        <div class="tweet-text">
-          <%= "ここに内容が表示されます。" %>
-        </div>
-        <div class="tweet-day">
-        </div>
-      </div>
-    <% else %>
-      <% @tweets.each do |tweet| %>
-        <%= link_to tweet_path(tweet), id: "show-link", class: "show-link" do %>
-          <% if Check.exists?(user_id: current_user.id, tweet_id: tweet.id) %>
-            <div class="old-link">
-              <div id="tweet-title" class="tweet-title" >
-                <%= tweet.title %>
-              </div>
-              <div class="tweet-text">
-                <%= tweet.text %>
-              </div>
-              <div class="tweet-under">
-                <div class="poster">
-                  <%= "投稿者：" %><%= tweet.user.username %>
-                </div>
-                <div class="tweet-day">
-                  <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
-                </div>
-              </div>
-              <div class="right-tweet">
-                <%= image_tag tweet.image, class: "tweet-image" %>
-              </div>
-            </div>
-          <% else %>
-            <div class="new-link">
-              <div id="tweet-title" class="tweet-title" >
-                <%= tweet.title %>
-              </div>
-              <div class="tweet-text">
-                <%= tweet.text %>
-              </div>
-              <div class="tweet-under">
-                <div class="poster">
-                  <%= "投稿者：" %><%= tweet.user.username %>
-                </div>
-                <div class="tweet-day">
-                  <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
-                </div>
-              </div>
-              <div class="right-tweet">
-                <%= image_tag tweet.image, class: "tweet-image" %>
-              </div>
-            </div>
-          <% end %>
+    <div class="tweet-top" >
+      ○News
+    </div>
+    <div class="tweet-block">
+      <% if @tweets.blank? %>
+        <div class="new-link">
+          <div class="tweet-title" >
+            <%= "ツイートを投稿しよう！" %>
           </div>
+          <div class="tweet-text">
+            <%= "ここに内容が表示されます。" %>
+          </div>
+          <div class="tweet-day">
+          </div>
+        </div>
+      <% else %>
+        <% @tweets.each do |tweet| %>
+          <%= link_to tweet_path(tweet), id: "show-link", class: "show-link" do %>
+            <% if Check.exists?(user_id: current_user.id, tweet_id: tweet.id) %>
+              <div class="old-link">
+                <div id="tweet-title" class="tweet-title" >
+                  <%= tweet.title %>
+                </div>
+                <div class="tweet-text">
+                  <%= tweet.text %>
+                </div>
+                <div class="tweet-under">
+                  <div class="poster">
+                    <%= "投稿者：" %><%= tweet.user.username %>
+                  </div>
+                  <div class="tweet-day">
+                    <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                  </div>
+                </div>
+                <div class="right-tweet">
+                  <%= image_tag tweet.image, class: "tweet-image" %>
+                </div>
+              </div>
+            <% else %>
+              <div class="new-link">
+                <div id="tweet-title" class="tweet-title" >
+                  <%= tweet.title %>
+                </div>
+                <div class="tweet-text">
+                  <%= tweet.text %>
+                </div>
+                <div class="tweet-under">
+                  <div class="poster">
+                    <%= "投稿者：" %><%= tweet.user.username %>
+                  </div>
+                  <div class="tweet-day">
+                    <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                  </div>
+                </div>
+                <div class="right-tweet">
+                  <%# <%= image_tag tweet.image, class: "tweet-image" %> %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
         <% end %>
       <% end %>
-      
-    <% end %>
+    </div>
   </div>
 </div>
 

@@ -1,0 +1,17 @@
+<div id="tweet-title" class="tweet-title" >
+  <%= tweet.title %>
+</div>
+<div class="tweet-text">
+  <%= tweet.text %>
+</div>
+<div class="tweet-under">
+  <div class="poster">
+    <%= "投稿者：" %><%= tweet.user.username %>
+  </div>
+  <div class="tweet-day">
+    <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
+  </div>
+</div>
+<div class="right-tweet">
+  <%= image_tag tweet.image, class: "tweet-image" %>
+</div>

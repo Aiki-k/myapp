@@ -18,16 +18,16 @@
       </div>
       <div class="new-info" >
         <% @tweet2.each do |t| %>
-            <%= link_to tweet_path(t.id), class: "link" do %> 
-              <div class="new-tweet" >
-                <div class="t-title" >
-                  <%= t.title %>
-                </div>
-                <div class="t-updated_at" >
-                  <%= t.updated_at.strftime("%Y-%m-%d %H:%M") %>
-                </div>
+          <%= link_to tweet_path(t.id), class: "link" do %> 
+            <div class="new-tweet" >
+              <div class="t-updated_at" >
+                <%= t.updated_at.strftime("%Y年%m月%d日") %>
               </div>
-            <% end %>
+              <div class="t-title" >
+                <span style="color:red"><%= "new!!" %></span><%= "　　" %><%= t.title %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>

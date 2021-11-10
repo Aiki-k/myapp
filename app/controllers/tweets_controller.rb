@@ -1,17 +1,17 @@
 class TweetsController < ApplicationController
   # before_action :authenticate_user!, except: [:top]
-  before_action :find_id, only: [:edit, :update, :show, :destroy]
+  before_action :find_id, only: [:edit, :update, :show]
   before_action :save_method, only: [:create, :update]
   before_action :top_redirect, except: :top
 
   def top
+    @user = User.all
   end
 
   def post
     @tag_list = Tag.all
     @tweets = Tweet.all.order("created_at DESC")
     @check = Check.new
-
   end
 
   def index
@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
     tag_list = params[:tweet][:tag_name].split(nil)
     if @tweet.save
       @tweet.save_tag(tag_list)
-      redirect_to root_path
+      redirect_to 
     else
       render :new
     end
@@ -46,12 +46,12 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    @tweet.destroy
+    @tweet = Tweet.find(params[:id])
+    @tweet.destroy  
     redirect_to root_path
   end
 
   def show
-    @tweet = Tweet.find(params[:id])
     @tweet_tags = @tweet.tags
     if status == 200
       Check.create(user_id: current_user.id, tweet_id: @tweet.id)
@@ -65,6 +65,7 @@ class TweetsController < ApplicationController
   end
 
   private
+
   def tweet_params
     params.require(:tweet).permit(:title, :text, :genre_id, :image).merge(user_id: current_user.id)
   end
@@ -78,8 +79,7 @@ class TweetsController < ApplicationController
   end
 
   def top_redirect
-    if user_signed_in?
-    else
+    unless user_signed_in?
       redirect_to "/tweets/top"
     end
   end

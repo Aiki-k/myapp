@@ -13,86 +13,80 @@
 
 .show-block{
   height: 530px;
+  width: 100%;
   left: 0;
   right: 0;
   margin-bottom: 80px;
-  border: 1px dotted gray;
-  /* background-color: honeydew; */
-}
-
-.tweet-link{
-  height: 400px;
-  width: auto;
-  padding-left: 20px;
-  display: flex;
-  font-size: 15px;
-  flex-direction: column;
-  margin: 20px;
-  background-color: white;
-  border: 1px solid white;
+  border: 1px solid gray;
+  border-radius: 4px;
 }
 
 .show-tweet-title{
-  width: 860px;
+  width: 900px;
   font-size: 20px;
   color: grey;
-  margin: 20px 20px 20px 0;
+  margin: 30px;
   padding: 5px;
   padding-left: 10px;
-  border: 1px solid gray;
-  border-left: 5px solid gray;
+  border-bottom: 1px dotted gray;
+  /* border: 1px dotted gray; */
+  /* border-left: 5px solid gray; */
 }
 
-.title-lun{
-  font-size: 50px;
-}
-
-.show-left-brock{
-  height: auto;
+.show-tweet-main{
+  margin-left: 30px;
   display: flex;
-  position: relative;
-}
-.show-tweet-genre{
-  width: auto;
-  margin: auto 0 0 auto;
-  padding-right: 30px;
-  font-size: 20px;
 }
 
 .show-tweet-text {
-  height: auto;
-  width: auto;
-  margin: 0 20px 20px 0;
-  padding-left: 10px;
-  font-size: 20px;
+  height: 300px;
+  width: 560px;
+  border: 1px dotted gray;
+  border-radius: 4px;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 30px;
 }
 
-.show-tweet-genre{
-  height: auto;
-  width: auto;
-  margin: 0 20px 20px 0;
+.text-change{
+  text-decoration: dotted;
+  text-decoration-color: gray;
+}
+
+.show-tweet-image{
+  /* height: 400px; */
+  width: 400px;
+}
+
+.show-tweet-poster{
+  margin-left: 20px;
   padding-left: 10px;
   font-size: 20px;
 }
 
 .edit-btn{
-  height: auto;
-  width: auto;
-  margin: 0 20px 20px 0;
+  /* margin: 0 0 50px 20px; */
+  margin-left: 20px;
   padding-left: 10px;
   font-size: 20px;
   position: absolute;
 }
 
-.show-tweet-image{
-  position: absolute;
-  right: 20px;
-  height: 400px;
-  width: 400px;
-}
 
 .show-image{
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
+  margin-left: 20px;
   border-radius: 25px;
+}
+
+
+
+/* user-show */
+
+.show-title{
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

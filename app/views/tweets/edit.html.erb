@@ -1,20 +1,44 @@
-<%= render "shared/header"%>
-<div>
-  <h2>
-    投稿編集ページです。
-  </h2>
-  <%= form_with model: @tweet, local: true do |f| %>
-    <div class="">
-      <div class="">
-        出品画像
-        <span class="">任意</span>
+<%= render "shared/header" %>
+<div class="wrapper">
+</div>
+<div class="center">
+  <div class="tweet-post">
+    <h2>
+      投稿編集ページです。
+    </h2>
+    <%= form_with model: @tweet, local: true do |f| %>
+        <div class="new-edit-form">
+          <div class="post-field">
+            <%= "画像"  %>
+            <p><%= f.file_field :image, id:"" %></p>
+          </div>
+          <div class="post-field">
+            <%= "タイトル"  %>
+            <p><%= f.text_field :title, id:"" %></p>
+          </div>
+          <div class="post-field">
+            <%= "ジャンル" %>
+            <p><%= f.collection_select(:genre_id, Genre.all, :id, :name, {})%></p>
+          </div>
+          <div class="post-field">
+            <%= "本文" %>
+            <p><%= f.text_area :text, :size=>"60x10", id:"" %></p>
+          </div>
+          <div class="post-field">
+            <%= "タグ付け" %>
+            <p><%= f.text_field :tag_name, placeholder: " 複数個の場合は半角スペースをあけて入力", class:"" %></p>
+          <div class="under-flex">
+
+          <%= f.submit '投稿する', :size => "30*40", class: "post-btn" %>
+
+          </div>
+        </div>
       </div>
-      <div class="">
-        <%= f.text_area :title, id:"" %>
-        <p><%= f.text_area :text, id:"" %></p>
-        <p><%= f.collection_select(:genre_id, Genre.all, :id, :name, {})%></p>
-        <p><%= f.submit '投稿する' %>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+</div>
+<div class="container">
+</div>
+
+<div class="footer">
 </div>

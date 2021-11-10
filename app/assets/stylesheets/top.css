@@ -1,8 +1,8 @@
 .top-main{
   height: 100vh;
-  color: white;
+  color: orange;
   padding-top: 70px;
-  background-color: black;
+  background-color: ivory;
   /* background: linear-gradient(-135deg, #E4A972, #9941D8); */
 }
 
@@ -52,5 +52,31 @@
 }
 
 .sign_in_text{
-  font-size: 50px;
+  text-align: center;
+  font-size: 40px;
+  display: block;
+}
+
+.users{
+  text-align: center;
+  font-size: 30px;
+  display: block;
+}
+
+.user-each{
+  display: flex;
+  margin-left: 45%;
+}
+
+/* .user-id{
+} */
+
+hr {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#ccc), to(transparent));
+  background-image: linear-gradient(to right, transparent, #ccc, transparent);
 }

@@ -1,3 +1,8 @@
+.tag_lists{
+  color: blue;
+  text-decoration: none;
+}
+
 .post-post{
   position: absolute;
   top: 20px;
@@ -27,7 +32,6 @@
   text-decoration: none;
 }
 
-
 .new-link{
   height: 200px;
   width: 600px;
@@ -44,7 +48,6 @@
   position: relative;
 }
 
-
 .old-link{
   height: 200px;
   width: 600px;
@@ -60,10 +63,6 @@
   background-color: white;
   position: relative;
 }
-
-/* .left-tweet{
-  width: 450px;
-} */
 
 .tweet-under{
   display: flex;
@@ -123,8 +122,6 @@
 }
 
 .tweet-image{
-  /* position: absolute;
-  top: 150px; */
   height: 170px;
   width: 170px;
   border-radius: 20px;
@@ -132,7 +129,6 @@
 
 .show-btn{
   text-decoration: none;
-  /* margin: 200px 30px; */
 }
 
 .container{
@@ -140,4 +136,3 @@
   width: 15vw;
   right: 20%;
 }
-

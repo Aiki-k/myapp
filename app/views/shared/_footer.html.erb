@@ -1,6 +1,26 @@
 <footer>
-  <%= "フッター" %>
+  <ul class="f-link">
+    <li><%= link_to "お知らせ", post_tweets_path, class: "f-news" %></li>
+    <li><%= link_to "スタッフ登録", top_tweets_path, class: "f-sign_in" %></li>
+  </ul>
+  <%= link_to root_path, class: "f-company" do %>
+    <%= " 守口市民体育館　" %>
+    <%= ' 指定管理者：株式会社オーエンス・エヌ・ティ・ティ・都市開発ビルサービスグループ ' %>
+  <% end %>
+  <div class="f-company-info">
+    <%= "大阪府守口市河原町9-2　　" %>
+    <%= "TEL:00-XXXX-YYYY　　" %>
+    <%= "FAX:00-XXXX-YYYY" %>
+  </div><br>
+
   <% if user_signed_in? %>
-    <%= link_to "ログアウト",destroy_user_session_path, method: :delete  %>
+    <div class="f-user">
+      <%= "現在ログイン中のユーザー：" %><%= link_to current_user.username, "user_path", class: "f-username" %><%= "さん　" %>
+      <%= "ログアウトは" %><%= link_to "こちら",destroy_user_session_path, method: :delete  %>
+    </div>
+  <% end %>
+
+  <% if user_signed_in? %>
+    
   <% end %>
 </footer>

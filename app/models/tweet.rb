@@ -2,10 +2,12 @@ class Tweet < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions #アクティブハッシュのアソシエーション
   belongs_to :genre
   belongs_to :user
-  has_many :checks
+  has_many :checks, dependent: :destroy
   has_many :tag_maps, dependent: :destroy
-  has_many :tags, through: :tag_maps
+  has_many :tags, :through => :tag_maps, dependent: :destroy
   has_one_attached :image
+
+  accepts_nested_attributes_for :tag_maps, allow_destroy: true
 
   def save_tag(sent_tags)
     current_tags = self.tags.pluck(:tag_name) unless self.tags.nil?
