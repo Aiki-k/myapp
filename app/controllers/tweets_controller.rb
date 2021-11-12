@@ -1,7 +1,7 @@
 class TweetsController < ApplicationController
   # before_action :authenticate_user!, except: [:top]
   before_action :find_id, only: [:edit, :update, :show]
-  before_action :save_method, only: [:create, :update]
+  # before_action :save_method, only: [:create, :update]
   before_action :top_redirect, except: :top
 
   def top
