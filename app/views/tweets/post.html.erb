@@ -6,7 +6,7 @@
 
   <div class="center">
     <span style="font-size:25px"><%= "タグから検索" %></span><br>
-    <% @tag_list.each_slice(2) do |list| %>
+    <% @tag_list.each do |list| %>
         <%= link_to list.tag_name, tag_posts_path(tag_id: list.id), class: "tag_lists" %></span>
         <%= "(#{list.tweets.count})" %>
     <% end %>
