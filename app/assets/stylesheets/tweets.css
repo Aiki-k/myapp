@@ -4,44 +4,41 @@
 
 
 .main{
-  height: auto;
+  /* height: auto; */
   width: auto;
   display: flex;
   font-size: 30px;
-  /* background-color: white; */
+  background-color: rgb( 40 40 40);
 }
 
 .wrapper{
   height: auto;
   width: 15vw;
-  /* background-color: ivory; */
+  background-color: rgb( 40 40 40);
 }
 
 .center{
-  /* height: auto; */
   width: 70%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-bottom: 30px;
+/* margin: 0 auto; */
+  margin: 30px 0;
   padding: 50px;
   position: relative;
-  background-color: ivory;
+  background-color: rgb( 40 40 40);
+  color: #0077dd;
+  border: 2px solid #0077dd;
+  /* background-color: rgb( 40 40 40); */
   box-shadow: 0 0 8px gray;
 }
 
-/* .container{
-  background-color: ivory;
-} */
-
 .top-image{
-  height: 400px;
-  width: auto;
-  border: 1px solid black;
+  height: 500px;
+  /* margin-bottom: 20px; */
+  /* width: auto; */
+  /* border: 1px solid black; */
   background-image: url("https://www.moriguchi-sports.jp/images/top/top-image02.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow:5px 5px gray;
+  /* box-shadow:5px 5px gray; */
 }
 
 .title{

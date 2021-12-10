@@ -1,6 +1,7 @@
 header{
-  margin: 20px 0;
-  /* background-color: ivory; */
+  padding: 20px 0;
+  background-color: rgb( 40 40 40);
+  color: #0077dd;
 }
 
 .header-center{
@@ -10,7 +11,6 @@ header{
   right: 0;
   margin: auto;
   position: relative;
-  /* background-color: ivory; */
 }
 
 .header-head{
@@ -27,22 +27,23 @@ header{
 .header-username{
   font-size: 30px;
   margin: auto 0 0 auto;
+  color: #0077dd;
 }
 
 .header-name-link{
-  color: black;
+  color: #0077dd;
   font-size: 50px;
   text-decoration: none;
 }
 
 .header-title{
   font-size: 30px;
-  color: black;
+  color: #0077dd;
   text-decoration: none;
 }
 
 .header-title-lb{
-  color: black;
+  color: #0077dd;
   text-decoration: none;
   font-size: 22px;
 }
@@ -56,10 +57,10 @@ header{
 
 .text{
   padding-top: 20px;
-  color: black;
+  color: #0077dd;
   font-size: 40px;
   text-decoration: none;
-  text-shadow: black;
+  /* text-shadow: #0077dd; */
 }
 
 .header-sub{
@@ -79,24 +80,24 @@ header{
 
 .user-nickname {
   text-decoration: none;
-  color:black;
+  color:#0077dd;
   font-weight: bold;
 }
 
 .logout {
   text-decoration: none;
-  color: black;
+  color: #0077dd;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
-  color:black;
+  color:#0077dd;
 }
 
 .sign-up {
   text-decoration: none;
-  color:black;
+  color:#0077dd;
 }
 
 /* =================================== */

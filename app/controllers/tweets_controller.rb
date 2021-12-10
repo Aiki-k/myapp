@@ -1,7 +1,5 @@
 class TweetsController < ApplicationController
-  # before_action :authenticate_user!, except: [:top]
-  before_action :find_id, only: [:edit, :update, :show]
-  # before_action :save_method, only: [:create, :update]
+  before_action :find_id, only: [:edit, :show]
   before_action :top_redirect, except: :top
 
   def top
@@ -38,7 +36,7 @@ class TweetsController < ApplicationController
   end
 
   def update
-    if @tweet.save
+    if @tweet.save(tweet_params)
       redirect_to root_path
     else
       render :edit
@@ -65,10 +63,8 @@ class TweetsController < ApplicationController
   end
 
   private
-
   def tweet_params
     params.require(:tweet).permit(:title, :text, :genre_id, :image)
-    # .merge(user_id: current_user.id)
   end
 
   def find_id

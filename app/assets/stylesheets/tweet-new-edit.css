@@ -1,6 +1,20 @@
 .tweet-post{
   height: 100vh;
 }
+
+.new-center{
+    height: 1000px;
+    width: 70%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 50px;
+    position: relative;
+    background-color: ivory;
+    box-shadow: 0 0 8px gray;
+}
+
 .new-edit-form{
   height: auto;
   width: 800px;

@@ -1,19 +1,18 @@
 <%= render "shared/header" %>
-<div class="wrapper">
-</div>
 
-<div class="center">
-  <%= "タグリスト" %><br>
-  <% @tag_list.each do |list| %>
-      <%= link_to list.tag_name, tag_posts_path(tag_id: list.id), class: "tag_lists" %>
-      <%= "(#{list.tweets.count})" %>
-  <% end %>
-  <%# タグのURL＝tag_posts_path(tag_id: list.id) %>
+<div class="main">
+  <div class="wrapper">
+  </div>
 
-  <%= link_to new_tweet_path, class: "post-post" do %>
-    <%= "投稿" %>
-  <% end %>
+  <div class="center">
+    <span style="font-size:25px"><%= "タグから検索" %></span><br>
+    <% @tag_list.each_slice(2) do |list| %>
+        <%= link_to list.tag_name, tag_posts_path(tag_id: list.id), class: "tag_lists" %></span>
+        <%= "(#{list.tweets.count})" %>
+    <% end %>
+    <%# タグのURL＝tag_posts_path(tag_id: list.id) %>
 
+    <%= link_to "作成",new_tweet_path, class: "post-post" %>
     <div class="tweet-top" >
       ○News
     </div>
@@ -77,6 +76,8 @@
         <% end %>
       <% end %>
     </div>
+  </div>
+  <div class="container">
   </div>
 </div>
 

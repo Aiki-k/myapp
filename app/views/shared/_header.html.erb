@@ -12,7 +12,7 @@
       <% end %>
       <% if user_signed_in? %>
         <div class="header-username">
-          <%= "こんにちは、" %><%= link_to current_user.username, "/users/#{current_user.id}", class: "header-name-link" %><%= "さん！" %>
+          <%= "ログインユーザー：" %><%= link_to current_user.username, "/users/#{current_user.id}", class: "header-name-link" %>
         </div>
       <% end %>
     </div>
