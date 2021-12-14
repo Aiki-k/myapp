@@ -2,7 +2,7 @@ class Tweet < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions #アクティブハッシュのアソシエーション
   belongs_to :genre
   belongs_to :user
-  has_many :checks, dependent: :destroy, foreign: :user_id
+  has_many :checks, dependent: :destroy, foreign: 'user_id'
   has_many :tag_maps, dependent: :destroy
   has_many :tags, :through => :tag_maps, dependent: :destroy
   has_one_attached :image
