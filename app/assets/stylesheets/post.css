@@ -1,23 +1,31 @@
 .tag_lists{
-  color: #0077dd;
+  color: aqua;
   text-decoration: none;
 }
 
-.post-post{
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  height: 45px;
-  width: 120px;
-  border-radius: 30px;
-  text-align: center;
-  background-color: red;
-  box-shadow: 2px 2px black;
+/* ボタン */
+.btn-circle-fishy {
+  display: inline-block;
   text-decoration: none;
-  font-size: 30px;
-  color: white;
-  display: block;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
+  transition: .4s;
+  position: absolute;
+  right: 60px;
 }
+
+.btn-circle-fishy:hover {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+/* /ボタン */
 
 .tweet-top{
   font-size: 30px;
@@ -45,8 +53,14 @@
   font-size: 15px;
   flex-direction: column;
   color: black;
-  background-color: lightcyan;
+  background-color: aqua;
   position: relative;
+  /* box-shadow: rgb(1, 190, 190) 20px 10px; */
+  transition: box-shadow 0.2s ease 0s;
+}
+
+.new-link:hover{
+  box-shadow: rgb(1, 190, 190) 20px 10px;
 }
 
 .old-link{
@@ -63,23 +77,39 @@
   color: black;
   background-color: rgb(60, 60, 60);
   position: relative;
+  transition: box-shadow 0.2s ease 0s;
 }
+
+.old-link:hover{
+  box-shadow: gray 20px 10px;
+}
+
+/* .new-link:hover, .old-link:hover{
+  border: 1px solid white;
+} */
 
 .tweet-under{
   display: flex;
 }
 
-.right-tweet{
-  width: 450px;
+.no_image{
   position: relative;
   position: absolute;
   top: 25px;
   left: 450px;
 }
 
+.right-tweet{
+  position: relative;
+  position: absolute;
+  top: 25px;
+  left: 450px;
+}
+
+
 .tweet-title{
   font-size: 25px;
-  color: lightgray;
+  color: black;
 }
 
 .tweet-show{
@@ -136,4 +166,15 @@
   height: auto;
   width: 15vw;
   right: 20%;
+}
+
+
+
+
+.testing{
+  color: black;
+}
+
+.testing:hover{
+  color: red;
 }

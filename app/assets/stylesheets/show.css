@@ -2,13 +2,13 @@
   width: auto;
   display: flex;
   font-size: 30px;
-  background-color:white;
+  background-color:rgb(40, 40, 40);
 }
 
 .tweet-show-news{
   font-size: 30px;
   margin-bottom: 20px;
-  border-bottom: 2px solid springgreen;
+  border-bottom: 1px dotted aqua;
 }
 
 .show-block{
@@ -16,21 +16,19 @@
   width: 100%;
   left: 0;
   right: 0;
-  margin-bottom: 80px;
-  border: 1px solid gray;
+  margin-bottom: 20px;
+  border: 1px solid aqua;
   border-radius: 4px;
 }
 
 .show-tweet-title{
   width: 900px;
   font-size: 20px;
-  color: grey;
+  color: aqua;
   margin: 30px;
   padding: 5px;
   padding-left: 10px;
-  border-bottom: 1px dotted gray;
-  /* border: 1px dotted gray; */
-  /* border-left: 5px solid gray; */
+  border-bottom: 1px dotted aqua;
 }
 
 .show-tweet-main{
@@ -41,7 +39,7 @@
 .show-tweet-text {
   height: 300px;
   width: 560px;
-  border: 1px dotted gray;
+  border: 1px dotted aqua;
   border-radius: 4px;
   margin-right: 20px;
   padding: 10px;
@@ -51,7 +49,7 @@
 
 .text-change{
   text-decoration: dotted;
-  text-decoration-color: gray;
+  text-decoration-color: aqua;
 }
 
 .show-tweet-image{
@@ -66,13 +64,20 @@
 }
 
 .edit-btn{
-  /* margin: 0 0 50px 20px; */
   margin-left: 20px;
   padding-left: 10px;
   font-size: 20px;
   position: absolute;
 }
 
+.show-change{
+  color: aqua;
+  padding-right: 10px;
+}
+
+.show-delete{
+  color: aqua;
+}
 
 .show-image{
   height: 300px;
@@ -81,12 +86,17 @@
   border-radius: 25px;
 }
 
-
-
 /* user-show */
 
 .show-title{
   font-size: 50px;
   text-align: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.show-back-btn{
+  display: flex;
+  justify-content: right;
+  color: aqua;
+  margin-bottom: 30px;
 }

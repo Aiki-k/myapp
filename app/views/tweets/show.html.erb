@@ -6,7 +6,7 @@
 
   <div class="show-center">
     <div class="tweet-show-news">
-      お知らせ
+      <span style="color: #0077dd">詳細画面</span>
     </div>
     <div class="show-block">
       <div class="show-tweet-title" >
@@ -17,18 +17,22 @@
           <%= @tweet.text %>
         </div>
         <div class="show-tweet-image">
-          <%= image_tag @tweet.image, class: "show-image"%> 
+          <% if @tweet.image.blank? %>
+            <%= image_tag "no_image.png", class: "show-image" %>
+          <% else %>
+            <%= image_tag @tweet.image, class: "show-image"%> 
+          <% end %>
         </div>
       </div>
       <div class="show-tweet-poster">
         <p><%= "投稿者："%><%= @tweet.user.username %></p>
       </div>
       <div class="edit-btn">
-        <%= link_to "追記・変更", edit_tweet_path(@tweet) %>
-        <%= link_to "削除",tweet_path(@tweet), method: :delete %>
+        <%= link_to "変更", edit_tweet_path(@tweet), class: "show-change" %>
+        <%= link_to "削除",tweet_path(@tweet), method: :delete, class: "show-delete" %>
       </div>
     </div>
-      <%= link_to "戻る", :back %>
+      <%= link_to "１つ前に戻る", :back, class: "show-back-btn" %>
   </div>
 
   <div class="container">

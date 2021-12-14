@@ -5,17 +5,18 @@
   </div>
 
   <div class="center">
+    <%= link_to "作成",new_tweet_path, class: "btn-circle-fishy" %>
     <span style="font-size:25px"><%= "タグから検索" %></span><br>
     <% @tag_list.each do |list| %>
         <%= link_to list.tag_name, tag_posts_path(tag_id: list.id), class: "tag_lists" %></span>
         <%= "(#{list.tweets.count})" %>
     <% end %>
+
     <%# タグのURL＝tag_posts_path(tag_id: list.id) %>
 
-    <%= link_to "作成",new_tweet_path, class: "post-post" %>
-    <div class="tweet-top" >
+    <h4 class="tweet-top" >
       ○News
-    </div>
+    </h4>
     <div class="tweet-block">
       <% if @tweets.blank? %>
         <div class="new-link">
@@ -47,9 +48,15 @@
                     <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
                   </div>
                 </div>
-                <div class="right-tweet">
-                  <%= image_tag tweet.image, class: "tweet-image" %>
-                </div>
+                <% if tweet.image.blank? %>
+                  <div class="no_image">
+                    <%= image_tag "no_image.png", class: "tweet-image" %>
+                  </div>
+                <% else %>
+                  <div class="right-tweet">
+                    <%= image_tag tweet.image, class: "tweet-image" %>
+                  </div>
+                <% end %>
               </div>
             <% else %>
               <div class="new-link">
@@ -67,9 +74,15 @@
                     <%= "更新日：" %><%= tweet.updated_at.strftime("%Y-%m-%d %H:%M") %>
                   </div>
                 </div>
-                <div class="right-tweet">
-                  <%= image_tag tweet.image, class: "tweet-image" %>
-                </div>
+                <% if tweet.image.blank? %>
+                  <div class="no_image">
+                    <%= image_tag "no_image.png", class: "tweet-image" %>
+                  </div>
+                <% else %>
+                  <div class="right-tweet">
+                    <%= image_tag tweet.image, class: "tweet-image" %>
+                  </div>
+                <% end %>
               </div>
             <% end %>
           <% end %>
@@ -78,6 +91,7 @@
     </div>
   </div>
   <div class="container">
+    
   </div>
 </div>
 

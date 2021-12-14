@@ -2,6 +2,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  color: aqua;
+}
+
 li{
   list-style: none;
 }

@@ -9,20 +9,16 @@
     <%= form_with model: @tweet, local: true do |f| %>
         <div class="new-edit-form">
           <div class="post-field">
-            <%= "画像"  %>
-            <p><%= f.file_field :image, id:"" %></p>
-          </div>
-          <div class="post-field">
             <%= "タイトル"  %>
             <p><%= f.text_field :title, id:"" %></p>
           </div>
           <div class="post-field">
-            <%= "ジャンル" %>
-            <p><%= f.collection_select(:genre_id, Genre.all, :id, :name, {})%></p>
-          </div>
-          <div class="post-field">
             <%= "本文" %>
             <p><%= f.text_area :text, :size=>"60x10", id:"" %></p>
+          </div>
+          <div class="post-field">
+            <%= "画像"  %>
+            <p><%= f.file_field :image, id:"" %></p>
           </div>
           <div class="post-field">
             <%= "タグ付け" %>

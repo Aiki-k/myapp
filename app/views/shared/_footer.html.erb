@@ -16,7 +16,7 @@
   <% if user_signed_in? %>
     <div class="f-user">
       <%= "現在ログイン中のユーザー：" %><%= link_to current_user.username, "user_path", class: "f-username" %><%= "さん　" %>
-      <%= "ログアウトは" %><%= link_to "こちら",destroy_user_session_path, method: :delete  %>
+      <%= "ログアウトは" %><%= link_to "こちら",destroy_user_session_path, method: :delete,class: "kotira" %>
     </div>
   <% end %>
 

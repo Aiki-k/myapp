@@ -1,7 +1,7 @@
 header{
   padding: 20px 0;
   background-color: rgb( 40, 40, 40);
-  color: #0077dd;
+  color: aqua;
 }
 
 .header-center{
@@ -27,23 +27,31 @@ header{
 .header-username{
   font-size: 30px;
   margin: auto 0 0 auto;
-  color: #0077dd;
+  color: aqua;
 }
 
 .header-name-link{
-  color: #0077dd;
+  color: aqua;
   font-size: 50px;
   text-decoration: none;
+  transition: .4s;
+  position: absolute;
+  top: 5px;
+}
+
+.header-name-link:hover{
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
 }
 
 .header-title{
   font-size: 30px;
-  color: #0077dd;
+  color: aqua;
   text-decoration: none;
 }
 
 .header-title-lb{
-  color: #0077dd;
+  color: aqua;
   text-decoration: none;
   font-size: 22px;
 }
@@ -57,10 +65,10 @@ header{
 
 .text{
   padding-top: 20px;
-  color: #0077dd;
+  color: aqua;
   font-size: 40px;
   text-decoration: none;
-  /* text-shadow: #0077dd; */
+  transition: color 0.5s;
 }
 
 .header-sub{
@@ -80,24 +88,24 @@ header{
 
 .user-nickname {
   text-decoration: none;
-  color:#0077dd;
+  color:aqua;
   font-weight: bold;
 }
 
 .logout {
   text-decoration: none;
-  color: #0077dd;
+  color: aqua;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
-  color:#0077dd;
+  color:aqua;
 }
 
 .sign-up {
   text-decoration: none;
-  color:#0077dd;
+  color:aqua;
 }
 
 /* =================================== */
@@ -107,7 +115,7 @@ header{
   height: 60px;
   width: auto;
   text-align: center;
-  background-color: #0077dd;
+  background-color: aqua;
 }
 
 .header-ul2{
@@ -124,4 +132,30 @@ header{
   justify-content: space-between;
   padding: 10px 30px;
   font-family: "游ゴシック", "YuGothic";
+}
+
+.line{
+  position: relative;
+  width: 100%;
+  margin: 5px 0;
+  padding: 20px 0;/*ボーダーとテキストに空間をあける為のpadding*/
+  color: #3F7EFA;
+  text-align: center;
+}
+
+.line::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  margin: 0 auto;
+  text-align: center;
+  background: #000; /*この部分は後にlinear-gradientへ*/
+  background-image: -webkit-linear-gradient(left, transparent, aqua 25%, aqua 75%, transparent);
+  background-image: linear-gradient(to right, transparent, aqua 25%, aqua 75%, transparent);
+  background-position: center;
+  background-repeat: no-repeat;
 }

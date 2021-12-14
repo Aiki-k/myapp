@@ -3,15 +3,15 @@
 }
 
 .new-center{
-    height: 1000px;
-    width: 70%;
+    height: 900px;
+    /* width: 70%; */
     left: 0;
     right: 0;
     margin: auto;
-    margin-bottom: 30px;
     padding: 50px;
     position: relative;
-    background-color: ivory;
+    color: aqua;
+    background-color: rgb(40, 40, 40);
     box-shadow: 0 0 8px gray;
 }
 
@@ -39,8 +39,14 @@ input[type="text"] {
   display: flex;
 }
 
+/* .new-image{
+
+} */
+
 .post-btn{
   height: 44px;
   width: 100px;
-  margin-left: 100px;
+  margin: 30px auto auto;
+  /* margin: 30px auto auto 100px; */
+  /* margin-left: 100px; */
 }

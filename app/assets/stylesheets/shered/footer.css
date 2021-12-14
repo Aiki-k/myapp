@@ -22,6 +22,11 @@ footer{
   color: white;
 }
 
+.f-news:hover,.f-sign_in:hover{
+  color: aqua;
+}
+
+
 .f-company{
   color: white;
   display: flex;
@@ -42,4 +47,13 @@ footer{
 
 .f-username{
   color: white;
+}
+
+.kotira{
+  color: #0077dd;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.kotira:hover{
+  color: red;
 }

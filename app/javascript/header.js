@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
       window['btn' + i].style.color = "red"
     });
     window['btn' + i].addEventListener('mouseout',() => {
-      window['btn' + i].style.color = "#0077dd"
+      window['btn' + i].style.color = "aqua"
     });
   };
 });
