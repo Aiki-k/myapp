@@ -31,6 +31,7 @@
 
 .top-image{
   height: 500px;
+  /* background-image: url("S__5111811.jpeg"); */
   background-image: url("https://www.moriguchi-sports.jp/images/top/top-image02.jpg");
   background-repeat: no-repeat;
   background-size: cover;

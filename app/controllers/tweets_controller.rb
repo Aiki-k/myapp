@@ -2,16 +2,6 @@ class TweetsController < ApplicationController
   before_action :find_id, only: [:edit, :show]
   before_action :top_redirect, except: :top
 
-  def top
-    @user = User.all
-  end
-
-  def post
-    @tag_list = Tag.all
-    @tweets = Tweet.all.order("created_at DESC")
-    @check = Check.new
-  end
-
   def index
     @tweet = Tweet.order("created_at DESC")
     @tweet2 = Tweet.order(updated_at: :desc).limit(5)
@@ -60,6 +50,16 @@ class TweetsController < ApplicationController
     @tag_list = Tag.all  #こっちの投稿一覧表示ページでも全てのタグを表示するために、タグを全取得
     @tag = Tag.find(params[:tag_id])  #クリックしたタグを取得
     @tweets = @tag.tweets.all           #クリックしたタグに紐付けられた投稿を全て表示
+  end
+
+  def top
+    @user = User.all
+  end
+
+  def post
+    @tag_list = Tag.all
+    @tweets = Tweet.all.order("created_at DESC")
+    @check = Check.new
   end
 
   private
