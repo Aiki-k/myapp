@@ -12,6 +12,7 @@ class TweetsController < ApplicationController
   end
 
   def create
+    binding.pry
     @tweet = current_user.tweets.new(tweet_params)
     tag_list = params[:tweet][:tag_name].split(nil)
     if @tweet.save
