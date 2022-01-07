@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node App.js"
+    "start": "node create.check.js"
   },
   "version": "0.1.0",
   "devDependencies": {
