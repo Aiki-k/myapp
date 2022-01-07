@@ -59,6 +59,11 @@ gem 'devise'
 
 gem 'devise-i18n'
 
+gem 'jquery-rails'
+
+gem 'fullcalendar-rails'
+gem 'momentjs-rails'
+
 gem 'haml_rails'
 
 gem 'pry-rails'
