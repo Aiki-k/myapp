@@ -9,6 +9,10 @@
     "jquery": "^3.6.0",
     "turbolinks": "^5.2.0"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node App.js"
+  },
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.11.2"
